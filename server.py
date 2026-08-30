@@ -6,8 +6,10 @@ import threading
 import time
 import requests
 
-HOST = "127.0.0.1"
-PORT = 8000
+import os
+
+HOST = "0.0.0.0"
+PORT = int(os.environ.get("PORT", 8000))
 
 # Roblox's public username-validation endpoint.
 VALIDATE_URL = "https://auth.roblox.com/v2/usernames/validate"
